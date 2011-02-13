@@ -6,10 +6,9 @@
   elementFormDefault="qualified">
 
 	<xsd:element name="createGenericSequence">
-    <xsd:annotation><xsd:documentation>tst</xsd:documentation></xsd:annotation>
 		<xsd:complexType>
       <xsd:attribute name="schemaName" type="xsd:string"/>
-			<xsd:attribute name="sequenceName" type="xsd:string" use="required"/>
+      <xsd:attribute name="sequenceName" type="xsd:string" use="required"/>
       <xsd:attribute name="startValue" type="xsd:integer" default="1"/>
       <xsd:attribute name="minValue" type="xsd:integer"/>
       <xsd:attribute name="maxValue" type="xsd:integer"/>
@@ -21,7 +20,6 @@
 	</xsd:element>
   
   <xsd:element name="dropGenericSequence">
-    <xsd:annotation></xsd:annotation>
     <xsd:complexType>
       <xsd:attribute name="schemaName" type="xsd:string" />
       <xsd:attribute name="sequenceName" type="xsd:string" use="required"/>
