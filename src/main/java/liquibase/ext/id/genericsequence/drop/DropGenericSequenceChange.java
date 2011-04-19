@@ -30,7 +30,7 @@ public class DropGenericSequenceChange extends AbstractChange {
   private boolean forceTableUse = false;
   
   public DropGenericSequenceChange() {
-    super("dropGenericSequence", "drops the generic sequence", 15);
+    super("dropGenericSequence", "Drop GenericSequence", 15);
   }
 
   /**

@@ -3,7 +3,7 @@
   <groupId>liquibase</groupId>
   <artifactId>genericsequence</artifactId>
   <name>liquibase-genericsequence</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <issueManagement>
   	<url>http://liquibase.jira.com/browse/CONTRIB</url>
   </issueManagement>

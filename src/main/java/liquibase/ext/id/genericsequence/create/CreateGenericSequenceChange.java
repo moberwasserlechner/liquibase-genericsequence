@@ -74,7 +74,7 @@ public class CreateGenericSequenceChange extends AbstractChange {
   
 
   public CreateGenericSequenceChange() {
-    super("createGenericSequence", "creates a sequence for database, which supports sequences and a table for all other databases", 15);
+    super("createGenericSequence", "Create GenericSequence", 15);
   }
 
   /**
