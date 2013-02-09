@@ -36,6 +36,7 @@ public class DropGenericSequenceChange extends AbstractChange {
   /**
    * @see liquibase.change.Change#getConfirmationMessage()
    */
+  @Override
   public String getConfirmationMessage() {
     return "GenericSequence successfully dropped!";
   }
@@ -43,6 +44,7 @@ public class DropGenericSequenceChange extends AbstractChange {
   /**
    * @see liquibase.change.Change#generateStatements(liquibase.database.Database)
    */
+  @Override
   public SqlStatement[] generateStatements(Database database) {
     List<SqlStatement> list = new ArrayList<SqlStatement>();
 

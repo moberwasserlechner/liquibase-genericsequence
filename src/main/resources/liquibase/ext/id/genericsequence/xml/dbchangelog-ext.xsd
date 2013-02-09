@@ -27,4 +27,12 @@
     </xsd:complexType>
   </xsd:element>
   
+  <xsd:element name="alterGenericSequence">
+    <xsd:complexType>
+      <xsd:attribute name="schemaName" type="xsd:string" />
+      <xsd:attribute name="sequenceName" type="xsd:string" use="required"/>
+      <xsd:attribute name="forceTableUse" type="xsd:boolean" default="false"/>
+    </xsd:complexType>
+  </xsd:element>
+  
 </xsd:schema>

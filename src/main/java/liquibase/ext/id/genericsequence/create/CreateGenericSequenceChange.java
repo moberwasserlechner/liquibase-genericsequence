@@ -80,6 +80,7 @@ public class CreateGenericSequenceChange extends AbstractChange {
   /**
    * @see liquibase.change.Change#getConfirmationMessage()
    */
+  @Override
   public String getConfirmationMessage() {
     return null;
   }
@@ -87,6 +88,7 @@ public class CreateGenericSequenceChange extends AbstractChange {
   /**
    * @see liquibase.change.Change#generateStatements(liquibase.database.Database)
    */
+  @Override
   public SqlStatement[] generateStatements(Database database) {
     List<SqlStatement> list = new ArrayList<SqlStatement>();
 
