@@ -1,20 +1,20 @@
-liquibase-genericsequence
-=========================
+#Liquibase Generic Sequence
+This liquibase extension brings Hibernate's SequenceStyleGenerator to Liquibase. 
 
-Generic Sequence brings Hibernate's SequenceStyleGenerator to Liquibase
+## Goal
+The main purpose of the generic sequence extension is to be able to use Hibernate’s SequenceStyleGenerator as a database-independent 
+way of creating IDs for tables. If your project supports more than on database you will not have to worry whether to use tables or sequences. 
+Liquibase knows which databases supports sequences and which do not. Based on this information either a sequence or a table is created. 
 
-# Purpose
-The main purpose of the genericSequence extension is to be able to use Hibernate’s SequenceStyleGenerator as a database-independent way of creating IDs for tables.
+For more information see the hibernate user guide, section **5.1.5. Enhanced identifier generators**
 
-For more details please read the according section in the user guide, which might be found at 5.1.5. Enhanced identifier generators
+## Features
 
-Right now the extension supports
+### CreateGenericSequence
+TBD
 
-* CreateGenericSequence
-* DropGenericSequence
-
-# How it works
-Depending on the used database the extension checks if sequences are supported or not. In the first case a sequence is used in the other case a table.
+### DropGenericSequence
+TBD
 
 ## Usage
 You can use this extension as a child element in your changeSets.
@@ -41,8 +41,9 @@ Example:
     </createTable>
   </changeSet>
 </databaseChangeLog>
+```
 
 
-See the schema file at for details.
+See the schema file at [src/main/resources/liquibase/ext/id/genericsequence/xml/dbchangelog-ext.xsd] for details.
 
 
