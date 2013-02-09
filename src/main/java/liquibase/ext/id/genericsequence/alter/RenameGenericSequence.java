@@ -3,6 +3,7 @@ package liquibase.ext.id.genericsequence.alter;
 import liquibase.change.AbstractChange;
 import liquibase.change.core.RenameTableChange;
 import liquibase.database.Database;
+import liquibase.database.core.OracleDatabase;
 import liquibase.statement.SqlStatement;
 
 /**
@@ -25,7 +26,10 @@ public class RenameGenericSequence extends AbstractChange {
 	@Override
 	public SqlStatement[] generateStatements(Database database) {
 		AbstractChange change = null;
-		if ((this.forceTableUse != null && this.forceTableUse) || !database.supportsSequences()) {
+		if ((this.forceTableUse != null && this.forceTableUse) 
+				|| !database.supportsSequences() 
+				|| database.getDatabaseProductName().equals(OracleDatabase.PRODUCT_NAME) // oracle uses the same rename syntax for tables and sequences
+	  ) {
 			RenameTableChange rtc = new RenameTableChange();
 			rtc.setSchemaName(this.schemaName);
 			rtc.setOldTableName(this.oldName);
@@ -33,6 +37,9 @@ public class RenameGenericSequence extends AbstractChange {
 			change = rtc;
 		} else {
 			// TODO
+			if (database.getTypeName().equals("oracle")) {
+
+			}
 			// rename sequence not supported by liquibase
 		}
 		

@@ -9,17 +9,11 @@ Liquibase knows which databases supports sequences and which do not. Based on th
 For more information see the hibernate user guide, section **5.1.5. Enhanced identifier generators**
 
 ## Features
+See the schema file at [src/main/resources/liquibase/ext/id/genericsequence/xml/dbchangelog-ext.xsd] for details.
 
 ### CreateGenericSequence
-TBD
 
-### DropGenericSequence
-TBD
-
-## Usage
-You can use this extension as a child element in your changeSets.
-
-Example:
+#### Example
 ```xml
 <databaseChangeLog
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
@@ -43,7 +37,5 @@ Example:
 </databaseChangeLog>
 ```
 
-
-See the schema file at [src/main/resources/liquibase/ext/id/genericsequence/xml/dbchangelog-ext.xsd] for details.
-
-
+### DropGenericSequence
+TBD
